@@ -3,13 +3,9 @@ import { useParams } from "react-router-dom";
 type QrType = "fire" | "water" | "earth" | "thunder";
 
 const ResultPage = () => {
-  const { type, keyword } = useParams<{ type: QrType; keyword: string }>();
+  const { type } = useParams<{ type: QrType }>();
 
-  return (
-    <div>
-      ResultPage: {type} {keyword}
-    </div>
-  );
+  return <div>ResultPage: {type}</div>;
 };
 
 export default ResultPage;

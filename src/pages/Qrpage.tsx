@@ -2,6 +2,7 @@ import { useParams, Navigate } from "react-router-dom";
 import Lottie from "lottie-react";
 import { useEffect, useState } from "react";
 import { getPokemonByType } from "../data/poket";
+import "./Qrpage.css";
 
 type QrType = "fire" | "water" | "earth" | "thunder" | "fail";
 const validTypes: QrType[] = ["fire", "water", "earth", "thunder", "fail"];
@@ -57,7 +58,7 @@ const Qrpage = () => {
   return (
     <div className="qr-page">
       <img src={poketObject.image} alt={`${type} ${id}`} className="qr-image" />
-      <h1 className="qr-title">{poketObject.word}</h1>
+      <h1 className="qr-title">키워드: {poketObject.word}</h1>
     </div>
   );
 };

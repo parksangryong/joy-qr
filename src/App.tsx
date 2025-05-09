@@ -24,7 +24,7 @@ function App() {
       errorElement: <ErrorPage />,
     },
     {
-      path: "/result/:type/:keyword",
+      path: "/result/:type/chord",
       element: <ResultPage />,
       errorElement: <ErrorPage />,
     },
