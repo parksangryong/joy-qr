@@ -4,7 +4,6 @@
   align-items: center;
   justify-content: flex-start;
   min-height: 100vh;
-  background: linear-gradient(135deg, #fffbe6 0%, #ffe0e0 100%);
   padding-top: 40px;
 }
 
@@ -154,4 +153,53 @@
   to {
     opacity: 1;
   }
+}
+
+/* 기본 FIRE(불) 테마 */
+.result-page,
+.result-fire {
+  background: linear-gradient(135deg, #fffbe6 0%, #ffe0e0 100%);
+}
+.result-fire .result-title,
+.result-fire .answer-main {
+  color: #ff5722;
+}
+.result-fire .answer-label {
+  color: #ff9800;
+}
+
+/* WATER(물) 테마 */
+.result-water {
+  background: linear-gradient(135deg, #e0f7fa 0%, #b3e5fc 100%);
+}
+.result-water .result-title,
+.result-water .answer-main {
+  color: #039be5;
+}
+.result-water .answer-label {
+  color: #00bcd4;
+}
+
+/* EARTH(땅) 테마 */
+.result-earth {
+  background: linear-gradient(135deg, #f1f8e9 0%, #c8e6c9 100%);
+}
+.result-earth .result-title,
+.result-earth .answer-main {
+  color: #689f38;
+}
+.result-earth .answer-label {
+  color: #8bc34a;
+}
+
+/* THUNDER(번개) 테마 */
+.result-thunder {
+  background: linear-gradient(135deg, #fffde7 0%, #fff9c4 100%);
+}
+.result-thunder .result-title,
+.result-thunder .answer-main {
+  color: #fbc02d;
+}
+.result-thunder .answer-label {
+  color: #ffd600;
 }

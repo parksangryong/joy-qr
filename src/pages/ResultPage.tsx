@@ -22,7 +22,7 @@ const ResultPage = () => {
   const result = getPokemonResult(type);
 
   return (
-    <div className="result-page">
+    <div className={`result-page result-${type}`}>
       <h1 className="result-title">🎉 정답입니다! 🎉</h1>
       <div className="result-subtitle">퍼즐 조각이 모두 맞춰졌어요!</div>
       <div className="puzzle-container">

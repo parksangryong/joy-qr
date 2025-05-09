@@ -70,7 +70,7 @@ const Qrpage = () => {
   };
 
   return (
-    <div className="qr-page">
+    <div className={`qr-page qr-${type}`}>
       <img src={poketObject.image} alt={`${type} ${id}`} className="qr-image" />
       <h1 className="qr-title">키워드: {poketObject.word}</h1>
       <div className="qr-input-container">
