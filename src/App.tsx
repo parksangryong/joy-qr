@@ -1,5 +1,6 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Qrpage from "./pages/Qrpage";
+import ResultPage from "./pages/ResultPage";
 
 function ErrorPage() {
   return (
@@ -18,8 +19,13 @@ function App() {
       errorElement: <ErrorPage />,
     },
     {
-      path: "/:type",
+      path: "/:type/:id",
       element: <Qrpage />,
+      errorElement: <ErrorPage />,
+    },
+    {
+      path: "/result/:type/:keyword",
+      element: <ResultPage />,
       errorElement: <ErrorPage />,
     },
   ]);

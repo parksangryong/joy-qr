@@ -2,8 +2,8 @@ import { useParams, Navigate } from "react-router-dom";
 import Lottie from "lottie-react";
 import { useEffect, useState } from "react";
 
-type QrType = "ab" | "cd" | "fail";
-const validTypes: QrType[] = ["ab", "cd", "fail"];
+type QrType = "fire" | "water" | "earth" | "thunder" | "fail";
+const validTypes: QrType[] = ["fire", "water", "earth", "thunder", "fail"];
 
 interface AnimationData {
   v: string;
@@ -18,7 +18,7 @@ interface AnimationData {
 }
 
 const Qrpage = () => {
-  const { type } = useParams<{ type: QrType }>();
+  const { type, id } = useParams<{ type: QrType; id: string }>();
   const [animationData, setAnimationData] = useState<AnimationData | null>(
     null
   );
@@ -50,7 +50,18 @@ const Qrpage = () => {
     );
   }
 
-  return <div>Qrpage {type}</div>;
+  return (
+    <div className="qr-page">
+      <img
+        src={`../assets/image/${type} ${id}.png`}
+        alt={`${type} ${id}`}
+        className="qr-image"
+      />
+      <h1 className="qr-title">
+        {type} : {id}
+      </h1>
+    </div>
+  );
 };
 
 export default Qrpage;
