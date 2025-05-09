@@ -45,7 +45,7 @@ const Qrpage = () => {
             style={{ width: 200, height: 200 }}
           />
         )}
-        <h1 className="fail-title">꽝</h1>
+        <h1 className="fail-title">- 꽝 -</h1>
       </div>
     );
   }
