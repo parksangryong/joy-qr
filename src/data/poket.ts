@@ -128,3 +128,18 @@ export const getPokemonByType = (type: string, id: number) => {
       };
   }
 };
+
+export const getPokemonResult = (type: string) => {
+  switch (type) {
+    case "fire":
+      return FIRE;
+    case "water":
+      return WATER;
+    case "earth":
+      return EARTH;
+    case "thunder":
+      return THUNDER;
+    default:
+      return [];
+  }
+};
