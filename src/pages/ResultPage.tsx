@@ -1,6 +1,7 @@
 import { useParams, Navigate } from "react-router-dom";
 import { getPokemonResult } from "../data/poket";
 import "./ResultPage.css"; // 스타일 분리 추천
+import { useState } from "react";
 
 type QrType = "fire" | "water" | "earth" | "thunder";
 
@@ -14,6 +15,7 @@ const piecePositions = [
 
 const ResultPage = () => {
   const { type } = useParams<{ type: QrType }>();
+  const [loadedCount, setLoadedCount] = useState(0);
 
   if (!type) {
     return <Navigate to="/" replace />;
@@ -21,11 +23,14 @@ const ResultPage = () => {
 
   const result = getPokemonResult(type);
 
+  // 모든 이미지가 로드되면 true
+  const allLoaded = loadedCount === result.length;
+
   return (
     <div className={`result-page result-${type}`}>
       <h1 className="result-title">🎉 정답입니다! 🎉</h1>
       <div className="result-subtitle">퍼즐 조각이 모두 맞춰졌어요!</div>
-      <div className="puzzle-container">
+      <div className={`puzzle-container${allLoaded ? " animate" : ""}`}>
         {result.map((piece, idx) => (
           <img
             key={piece.id}
@@ -33,6 +38,8 @@ const ResultPage = () => {
             alt={`조각${piece.id}`}
             className={`puzzle-piece ${piecePositions[idx].className}`}
             style={{ zIndex: idx === 0 ? 2 : 3 }}
+            onLoad={() => setLoadedCount((c) => c + 1)}
+            draggable={false}
           />
         ))}
       </div>
