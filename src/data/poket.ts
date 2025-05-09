@@ -109,3 +109,22 @@ export const THUNDER = [
     word: "C",
   },
 ];
+
+export const getPokemonByType = (type: string, id: number) => {
+  switch (type) {
+    case "fire":
+      return FIRE[id - 1];
+    case "water":
+      return WATER[id - 1];
+    case "earth":
+      return EARTH[id - 1];
+    case "thunder":
+      return THUNDER[id - 1];
+    default:
+      return {
+        id: 0,
+        image: "",
+        word: "",
+      };
+  }
+};

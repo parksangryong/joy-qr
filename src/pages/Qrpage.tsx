@@ -1,6 +1,7 @@
 import { useParams, Navigate } from "react-router-dom";
 import Lottie from "lottie-react";
 import { useEffect, useState } from "react";
+import { getPokemonByType } from "../data/poket";
 
 type QrType = "fire" | "water" | "earth" | "thunder" | "fail";
 const validTypes: QrType[] = ["fire", "water", "earth", "thunder", "fail"];
@@ -24,7 +25,7 @@ const Qrpage = () => {
   );
 
   useEffect(() => {
-    if (type === "fail") {
+    if (type === "fail" || id) {
       import("../assets/cat1.json").then((data) => {
         setAnimationData(data.default);
       });
@@ -50,16 +51,13 @@ const Qrpage = () => {
     );
   }
 
+  const pokemonId = parseInt(id || "0");
+  const poketObject = getPokemonByType(type, pokemonId);
+
   return (
     <div className="qr-page">
-      <img
-        src={`../assets/image/${type} ${id}.png`}
-        alt={`${type} ${id}`}
-        className="qr-image"
-      />
-      <h1 className="qr-title">
-        {type} : {id}
-      </h1>
+      <img src={poketObject.image} alt={`${type} ${id}`} className="qr-image" />
+      <h1 className="qr-title">{poketObject.word}</h1>
     </div>
   );
 };
