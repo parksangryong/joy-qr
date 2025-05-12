@@ -1,6 +1,9 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Qrpage from "./pages/Qrpage";
 import ResultPage from "./pages/ResultPage";
+import SchedulePage from "./pages/SchedulePage";
+import ScheduleAdminPage from "./pages/ScheduleAdminPage";
+import NoticePage from "./pages/NoticePage";
 
 function ErrorPage() {
   return (
@@ -15,7 +18,7 @@ function App() {
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <div className="home">Hello my name is Qrpage</div>,
+      element: <NoticePage />,
       errorElement: <ErrorPage />,
     },
     {
@@ -26,6 +29,16 @@ function App() {
     {
       path: "/result/:type/chord",
       element: <ResultPage />,
+      errorElement: <ErrorPage />,
+    },
+    {
+      path: "/schedule",
+      element: <SchedulePage />,
+      errorElement: <ErrorPage />,
+    },
+    {
+      path: "/schedule/admin",
+      element: <ScheduleAdminPage />,
       errorElement: <ErrorPage />,
     },
   ]);
