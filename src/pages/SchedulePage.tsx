@@ -114,36 +114,43 @@ const SchedulePage = () => {
   }, {} as Record<string, ScheduleItem[]>);
 
   return (
-    <div className="schedule-container">
-      <button className="back-button" onClick={() => navigate(-1)}>
-        ← 뒤로가기
-      </button>
-      <h1 className="schedule-title">
-        <span className="title-highlight">화음</span> 일박 일정표
-      </h1>
+    <>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Gaegu:wght@400;700&family=Noto+Sans+KR:wght@400;500;700&display=swap"
+        rel="stylesheet"
+      />
 
-      {Object.entries(groupedSchedule).map(([date, items]) => (
-        <div key={date} className="schedule-day">
-          <h2 className="day-title">{date}</h2>
-          <div className="schedule-timeline">
-            {items.map((item, index) => (
-              <div key={index} className="schedule-item">
-                <div className="time-badge">
-                  <span className="time">{item.time}</span>
-                </div>
-                <div className="schedule-content">
-                  <div className="schedule-icon">{item.icon}</div>
-                  <div className="schedule-details">
-                    <h3>{item.title}</h3>
-                    <p>{item.description}</p>
+      <div className="schedule-container">
+        <button className="back-button" onClick={() => navigate(-1)}>
+          ← 뒤로가기
+        </button>
+        <h1 className="schedule-title">
+          <span className="title-highlight">화음</span> 일박 일정표
+        </h1>
+
+        {Object.entries(groupedSchedule).map(([date, items]) => (
+          <div key={date} className="schedule-day">
+            <h2 className="day-title">{date}</h2>
+            <div className="schedule-timeline">
+              {items.map((item, index) => (
+                <div key={index} className="schedule-item">
+                  <div className="time-badge">
+                    <span className="time">{item.time}</span>
+                  </div>
+                  <div className="schedule-content">
+                    <div className="schedule-icon">{item.icon}</div>
+                    <div className="schedule-details">
+                      <h3>{item.title}</h3>
+                      <p>{item.description}</p>
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
-      ))}
-    </div>
+        ))}
+      </div>
+    </>
   );
 };
 

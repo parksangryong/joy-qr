@@ -88,7 +88,7 @@ const NoticePage = () => {
                 <span>소망하는 마음</span>
               </div>
               <div className="checklist-item">
-                <div className="checklist-icon">👟</div>
+                <div className="checklist-icon">🩴</div>
                 <span>슬리퍼</span>
               </div>
               <div className="checklist-item">
