@@ -2,7 +2,6 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Qrpage from "./pages/Qrpage";
 import ResultPage from "./pages/ResultPage";
 import SchedulePage from "./pages/SchedulePage";
-import ScheduleAdminPage from "./pages/ScheduleAdminPage";
 import NoticePage from "./pages/NoticePage";
 
 function ErrorPage() {
@@ -32,13 +31,8 @@ function App() {
       errorElement: <ErrorPage />,
     },
     {
-      path: "/schedule",
+      path: "/timetable",
       element: <SchedulePage />,
-      errorElement: <ErrorPage />,
-    },
-    {
-      path: "/schedule/admin",
-      element: <ScheduleAdminPage />,
       errorElement: <ErrorPage />,
     },
   ]);
