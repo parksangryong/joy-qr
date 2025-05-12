@@ -54,7 +54,7 @@ const scheduleData: ScheduleItem[] = [
   },
   {
     time: "21:30",
-    title: "무엇이든 물어보 L",
+    title: "규진짱의 엘(L)피소드",
     description: "무엇이든 물어보세요! 사연도 읽어주고 답도 해줄게요!",
     icon: "💬",
     date: "5월 17일",
