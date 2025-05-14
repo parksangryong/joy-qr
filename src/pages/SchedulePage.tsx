@@ -83,7 +83,7 @@ const scheduleData: ScheduleItem[] = [
   {
     time: "09:00",
     title: "아침식사",
-    description: "아침식사 및 휴식(맥모닝 or 국밥)",
+    description: "팀별 아침식사(안 먹고 싶으면 음료 가능) ",
     icon: "🍳",
     date: "5월 18일",
   },
