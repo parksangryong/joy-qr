@@ -3,7 +3,7 @@ import Qrpage from "./pages/Qrpage";
 import ResultPage from "./pages/ResultPage";
 import SchedulePage from "./pages/SchedulePage";
 import NoticePage from "./pages/NoticePage";
-
+import Quiz from "./pages/Quiz";
 function ErrorPage() {
   return (
     <div className="error-page">
@@ -33,6 +33,11 @@ function App() {
     {
       path: "/timetable",
       element: <SchedulePage />,
+      errorElement: <ErrorPage />,
+    },
+    {
+      path: "/quiz",
+      element: <Quiz />,
       errorElement: <ErrorPage />,
     },
   ]);

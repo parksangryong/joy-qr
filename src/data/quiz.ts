@@ -1,0 +1,173 @@
+export interface Quiz {
+  id: number;
+  question: string;
+  options: string[];
+  answer: number;
+  explanation: string;
+  team: string;
+}
+
+export const teams = ["팀 파이리", "팀 꼬부기", "팀 피카츄", "팀 이상해씨"];
+
+export const quizData: Quiz[] = [
+  {
+    id: 1,
+    question: "다음 중 가장 큰 행성은?",
+    options: ["지구", "목성", "토성"],
+    answer: 1,
+    explanation: "목성은 태양계에서 가장 큰 행성입니다.",
+    team: "팀 파이리",
+  },
+  {
+    id: 2,
+    question: "물의 화학식은?",
+    options: ["CO2", "H2O", "O2"],
+    answer: 1,
+    explanation: "물의 화학식은 H2O입니다.",
+    team: "팀 꼬부기",
+  },
+  {
+    id: 3,
+    question: "인간의 정상 체온은?",
+    options: ["36.5°C", "37.5°C", "38.5°C"],
+    answer: 1,
+    explanation: "인간의 정상 체온은 약 36.5°C입니다.",
+    team: "팀 피카츄",
+  },
+  {
+    id: 4,
+    question: "세계에서 가장 긴 강은?",
+    options: ["나일강", "아마존강", "양쯔강"],
+    answer: 1,
+    explanation: "나일강은 세계에서 가장 긴 강입니다.",
+    team: "팀 이상해씨",
+  },
+  {
+    id: 5,
+    question: "다음 중 가장 작은 대륙은?",
+    options: ["유럽", "오세아니아", "남아메리카"],
+    answer: 1,
+    explanation: "오세아니아는 가장 작은 대륙입니다.",
+    team: "팀 파이리",
+  },
+  {
+    id: 6,
+    question: "태양계에서 가장 뜨거운 행성은?",
+    options: ["금성", "화성", "수성"],
+    answer: 1,
+    explanation: "금성은 태양계에서 가장 뜨거운 행성입니다.",
+    team: "팀 꼬부기",
+  },
+  {
+    id: 7,
+    question: "인간의 심장은 몇 개의 방으로 이루어져 있나요?",
+    options: ["2개", "3개", "4개"],
+    answer: 1,
+    explanation: "인간의 심장은 4개의 방으로 이루어져 있습니다.",
+    team: "팀 피카츄",
+  },
+  {
+    id: 8,
+    question: "세계에서 가장 높은 산은?",
+    options: ["K2", "에베레스트", "매킨리"],
+    answer: 1,
+    explanation: "에베레스트는 세계에서 가장 높은 산입니다.",
+    team: "팀 이상해씨",
+  },
+  {
+    id: 9,
+    question: "다음 중 가장 큰 대양은?",
+    options: ["대서양", "인도양", "태평양"],
+    answer: 2,
+    explanation: "태평양은 세계에서 가장 큰 대양입니다.",
+    team: "팀 파이리",
+  },
+  {
+    id: 10,
+    question: "인간의 뼈는 총 몇 개인가요?",
+    options: ["206개", "186개", "226개"],
+    answer: 2,
+    explanation: "성인의 뼈는 총 206개입니다.",
+    team: "팀 꼬부기",
+  },
+  {
+    id: 11,
+    question: "다음 중 가장 큰 행성은?",
+    options: ["지구", "목성", "토성"],
+    answer: 2,
+    explanation: "목성은 태양계에서 가장 큰 행성입니다.",
+    team: "팀 피카츄",
+  },
+  {
+    id: 12,
+    question: "물의 화학식은?",
+    options: ["CO2", "H2O", "O2"],
+    answer: 2,
+    explanation: "물의 화학식은 H2O입니다.",
+    team: "팀 이상해씨",
+  },
+  {
+    id: 13,
+    question: "인간의 정상 체온은?",
+    options: ["36.5°C", "37.5°C", "38.5°C"],
+    answer: 2,
+    explanation: "인간의 정상 체온은 약 36.5°C입니다.",
+    team: "팀 파이리",
+  },
+  {
+    id: 14,
+    question: "세계에서 가장 긴 강은?",
+    options: ["나일강", "아마존강", "양쯔강"],
+    answer: 2,
+    explanation: "나일강은 세계에서 가장 긴 강입니다.",
+    team: "팀 꼬부기",
+  },
+  {
+    id: 15,
+    question: "다음 중 가장 작은 대륙은?",
+    options: ["유럽", "오세아니아", "남아메리카"],
+    answer: 2,
+    explanation: "오세아니아는 가장 작은 대륙입니다.",
+    team: "팀 피카츄",
+  },
+  {
+    id: 16,
+    question: "태양계에서 가장 뜨거운 행성은?",
+    options: ["금성", "화성", "수성"],
+    answer: 2,
+    explanation: "금성은 태양계에서 가장 뜨거운 행성입니다.",
+    team: "팀 이상해씨",
+  },
+  {
+    id: 17,
+    question: "인간의 심장은 몇 개의 방으로 이루어져 있나요?",
+    options: ["2개", "3개", "4개"],
+    answer: 3,
+    explanation: "인간의 심장은 4개의 방으로 이루어져 있습니다.",
+    team: "팀 파이리",
+  },
+  {
+    id: 18,
+    question: "세계에서 가장 높은 산은?",
+    options: ["K2", "에베레스트", "매킨리"],
+    answer: 3,
+    explanation: "에베레스트는 세계에서 가장 높은 산입니다.",
+    team: "팀 꼬부기",
+  },
+  {
+    id: 19,
+    question: "다음 중 가장 큰 대양은?",
+    options: ["대서양", "인도양", "태평양"],
+    answer: 3,
+    explanation: "태평양은 세계에서 가장 큰 대양입니다.",
+    team: "팀 피카츄",
+  },
+  {
+    id: 20,
+    question: "인간의 뼈는 총 몇 개인가요?",
+    options: ["206개", "186개", "226개"],
+    answer: 3,
+    explanation: "성인의 뼈는 총 206개입니다.",
+    team: "팀 이상해씨",
+  },
+];
