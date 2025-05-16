@@ -34,7 +34,7 @@ const Quiz = () => {
     if (selectedAnswer === currentQuiz.answer) {
       setTeamScores((prev) => ({
         ...prev,
-        [currentQuiz.team]: (prev[currentQuiz.team] || 0) + 1,
+        [currentQuiz.team]: (prev[currentQuiz.team] || 0) + currentQuiz.points,
       }));
     }
 
@@ -94,7 +94,10 @@ const Quiz = () => {
 
       <div className="quiz-header">
         <div className="quiz-question">{currentQuiz.question}</div>
-        <div className="quiz-team">{currentQuiz.team}의 문제</div>
+        <div className="quiz-info">
+          <div className="quiz-team">{currentQuiz.team}의 문제</div>
+          <div className="quiz-points">{currentQuiz.points}점</div>
+        </div>
       </div>
 
       <div className="quiz-options">

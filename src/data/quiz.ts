@@ -5,6 +5,7 @@ export interface Quiz {
   answer: number;
   explanation: string;
   team: string;
+  points: number;
 }
 
 export const teams = ["팀 파이리", "팀 꼬부기", "팀 피카츄", "팀 이상해씨"];
@@ -17,6 +18,7 @@ export const quizData: Quiz[] = [
     answer: 1,
     explanation: "목성은 태양계에서 가장 큰 행성입니다.",
     team: "팀 파이리",
+    points: 10,
   },
   {
     id: 2,
@@ -25,6 +27,7 @@ export const quizData: Quiz[] = [
     answer: 1,
     explanation: "물의 화학식은 H2O입니다.",
     team: "팀 꼬부기",
+    points: 10,
   },
   {
     id: 3,
@@ -33,6 +36,7 @@ export const quizData: Quiz[] = [
     answer: 1,
     explanation: "인간의 정상 체온은 약 36.5°C입니다.",
     team: "팀 피카츄",
+    points: 15,
   },
   {
     id: 4,
@@ -41,6 +45,7 @@ export const quizData: Quiz[] = [
     answer: 1,
     explanation: "나일강은 세계에서 가장 긴 강입니다.",
     team: "팀 이상해씨",
+    points: 15,
   },
   {
     id: 5,
@@ -49,6 +54,7 @@ export const quizData: Quiz[] = [
     answer: 1,
     explanation: "오세아니아는 가장 작은 대륙입니다.",
     team: "팀 파이리",
+    points: 20,
   },
   {
     id: 6,
@@ -57,6 +63,7 @@ export const quizData: Quiz[] = [
     answer: 1,
     explanation: "금성은 태양계에서 가장 뜨거운 행성입니다.",
     team: "팀 꼬부기",
+    points: 20,
   },
   {
     id: 7,
@@ -65,6 +72,7 @@ export const quizData: Quiz[] = [
     answer: 1,
     explanation: "인간의 심장은 4개의 방으로 이루어져 있습니다.",
     team: "팀 피카츄",
+    points: 25,
   },
   {
     id: 8,
@@ -73,6 +81,7 @@ export const quizData: Quiz[] = [
     answer: 1,
     explanation: "에베레스트는 세계에서 가장 높은 산입니다.",
     team: "팀 이상해씨",
+    points: 25,
   },
   {
     id: 9,
@@ -81,6 +90,7 @@ export const quizData: Quiz[] = [
     answer: 2,
     explanation: "태평양은 세계에서 가장 큰 대양입니다.",
     team: "팀 파이리",
+    points: 30,
   },
   {
     id: 10,
@@ -89,6 +99,7 @@ export const quizData: Quiz[] = [
     answer: 2,
     explanation: "성인의 뼈는 총 206개입니다.",
     team: "팀 꼬부기",
+    points: 30,
   },
   {
     id: 11,
@@ -97,6 +108,7 @@ export const quizData: Quiz[] = [
     answer: 2,
     explanation: "목성은 태양계에서 가장 큰 행성입니다.",
     team: "팀 피카츄",
+    points: 35,
   },
   {
     id: 12,
@@ -105,6 +117,7 @@ export const quizData: Quiz[] = [
     answer: 2,
     explanation: "물의 화학식은 H2O입니다.",
     team: "팀 이상해씨",
+    points: 35,
   },
   {
     id: 13,
@@ -113,6 +126,7 @@ export const quizData: Quiz[] = [
     answer: 1,
     explanation: "윌로우는 우리 교회 아래에 새로 생긴 카페입니다.",
     team: "팀 파이리",
+    points: 40,
   },
   {
     id: 14,
@@ -121,6 +135,7 @@ export const quizData: Quiz[] = [
     answer: 1,
     explanation: "나일강은 세계에서 가장 긴 강입니다.",
     team: "팀 꼬부기",
+    points: 40,
   },
   {
     id: 15,
@@ -129,6 +144,7 @@ export const quizData: Quiz[] = [
     answer: 1,
     explanation: "오세아니아는 가장 작은 대륙입니다.",
     team: "팀 피카츄",
+    points: 45,
   },
   {
     id: 16,
@@ -137,6 +153,7 @@ export const quizData: Quiz[] = [
     answer: 2,
     explanation: "금성은 태양계에서 가장 뜨거운 행성입니다.",
     team: "팀 이상해씨",
+    points: 45,
   },
   {
     id: 17,
@@ -145,6 +162,7 @@ export const quizData: Quiz[] = [
     answer: 3,
     explanation: "인간의 심장은 4개의 방으로 이루어져 있습니다.",
     team: "팀 파이리",
+    points: 50,
   },
   {
     id: 18,
@@ -153,6 +171,7 @@ export const quizData: Quiz[] = [
     answer: 3,
     explanation: "에베레스트는 세계에서 가장 높은 산입니다.",
     team: "팀 꼬부기",
+    points: 50,
   },
   {
     id: 19,
@@ -161,6 +180,7 @@ export const quizData: Quiz[] = [
     answer: 3,
     explanation: "태평양은 세계에서 가장 큰 대양입니다.",
     team: "팀 피카츄",
+    points: 55,
   },
   {
     id: 20,
@@ -169,5 +189,6 @@ export const quizData: Quiz[] = [
     answer: 3,
     explanation: "성인의 뼈는 총 206개입니다.",
     team: "팀 이상해씨",
+    points: 60,
   },
 ];

@@ -25,16 +25,30 @@
   line-height: 1.4;
 }
 
+.quiz-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
 .quiz-team {
-  text-align: center;
   font-size: 1.2rem;
   color: #ff9a8b;
   font-weight: 600;
   padding: 0.5rem 1rem;
   background: #fff0ed;
   border-radius: 8px;
-  display: inline-block;
-  margin: 0 auto;
+}
+
+.quiz-points {
+  font-size: 1.2rem;
+  color: #4caf50;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  background: #e8f5e9;
+  border-radius: 8px;
 }
 
 .quiz-options {
@@ -196,7 +210,13 @@
     font-size: 1.5rem;
   }
 
-  .quiz-team {
+  .quiz-info {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .quiz-team,
+  .quiz-points {
     font-size: 1rem;
   }
 
