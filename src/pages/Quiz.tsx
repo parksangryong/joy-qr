@@ -31,7 +31,7 @@ const Quiz = () => {
     if (selectedAnswer === null) return;
 
     const currentQuiz = quizData[currentQuestion];
-    if (selectedAnswer === currentQuiz.answer) {
+    if (selectedAnswer === currentQuiz.answer - 1) {
       setTeamScores((prev) => ({
         ...prev,
         [currentQuiz.team]: (prev[currentQuiz.team] || 0) + currentQuiz.points,
@@ -108,7 +108,7 @@ const Quiz = () => {
               selectedAnswer === index ? "selected" : ""
             } ${
               showExplanation
-                ? index === currentQuiz.answer
+                ? index === currentQuiz.answer - 1
                   ? "correct"
                   : selectedAnswer === index
                   ? "wrong"
